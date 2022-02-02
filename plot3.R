@@ -1,7 +1,7 @@
 ## LOAD SOURCE
 source("loadData.R");
 
-## CODE FOR plot2.png
+## CODE FOR plot3.png
 plot(dt$Date_and_Time, 
      dt$Sub_metering_1, 
      xlab = "2007/02/01-2007/02/02", 
