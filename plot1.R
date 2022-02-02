@@ -5,8 +5,7 @@ source("loadData.R");
 hist(dt$Global_active_power, 
      xlab = "Global Active Power (kilowatts)", 
      main = "Global Active Power", 
-     col = "midnightblue", 
-     border = "red"
+     col = "red"
 );
 
 ## CREATE PNG FILE

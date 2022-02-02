@@ -5,7 +5,7 @@ source("loadData.R");
 
 ### META PARAMETERS SETTING
 par(mfrow = c(2,2));
-par(mar = c(4.3,1,4.3,1));
+par(mar = c(4,1,2,1));
 
 
 # TOP LEFT
@@ -13,16 +13,14 @@ plot(dt$Date_and_Time,
      dt$Global_active_power, 
      xlab = "2007/02/01-2007/02/02", 
      ylab = "Global Active Power (kilowatts)", 
-     type = "l", 
-     col = "blue"
+     type = "l"
 );
 # TOP RIGHT
 plot(dt$Date_and_Time, 
      dt$Voltage, 
      xlab = "datetime", 
      ylab = "Voltage",
-     type = "l", 
-     col = "grey"
+     type = "l"
 );
 
 # BOTTOM LEFT
@@ -39,7 +37,8 @@ points(x = dt$Date_and_Time, y=dt$Sub_metering_3, type = "l", col = "blue");
 
 legend("topright", 
        legend = expression(Sub_metering_1, Sub_metering_2, Sub_metering_3), 
-       pch = c("_", "_", "_"), 
+       lty = 1,
+       bty = "n",
        col = c("black", "red", "blue")
 );
 
@@ -48,8 +47,7 @@ plot(dt$Date_and_Time,
      dt$Global_reactive_power, 
      xlab = "datetime", 
      ylab = "Global reactive power",
-     type = "l", 
-     col = "green"
+     type = "l"
 );
 
 ### META PARAMETERS DEFAULT SETTING
