@@ -16,9 +16,11 @@ if(!exists("LOADDATA")) {
   dt <- dt[Date == "1/2/2007" | Date == "2/2/2007"];
   
   ## IMPROVE COLUMNS ACCURACY
-  Date_and_Time <- dmy_hms(paste(dt$Date, dt$Time, sep = "T"));
+  Date_and_Time <- dmy_hms(paste(dt$Date, dt$Time));
   dt <- dt[, lapply(.SD, as.numeric), .SDcols = 3:9];
   dt <- cbind(Date_and_Time, dt);
   
+  #rm(Date_and_Time, WeekDay, date, wday_date, r);
+  rm(Date_and_Time);
 }
 
